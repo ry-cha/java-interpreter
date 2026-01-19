@@ -94,13 +94,14 @@ class Parser {
             condition = expression();
         }
         consume(SEMICOLON, "Expect ';' after loop condition.");
-        Stmt body = statement();
 
         Expr increment = null;
         if (!check(RIGHT_PAREN)){
             increment = expression();
         }
         consume(RIGHT_PAREN, "Expect ')' after for clauses.");
+
+        Stmt body = statement();
 
         if (increment != null){
             body = new Stmt.Block(

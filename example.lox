@@ -1,0 +1,29 @@
+// Variables
+var x = 10;
+var y = 20;
+print x + y;
+
+// Functions
+fun greet(name) {
+    return "Hello, " + name + "!";
+}
+print greet("Lox");
+
+// Classes
+class Person {
+    init(name) {
+        this.name = name;
+    }
+    
+    greet() {
+        return "Hi, I'm " + this.name;
+    }
+}
+
+var person = Person("Ryan");
+print person.greet();
+
+// Control flow
+for (var i = 1; i <= 5; i = i + 1) {
+    print i;
+}
